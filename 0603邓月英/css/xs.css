@@ -1,0 +1,44 @@
+.md { display: none; }
+
+.xs .center li .head, .xs .center li .content, .xs footer .foot, .xs footer .last { width: 100%; display: -webkit-flex; }
+
+.xs .center li .content .xq h2 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+
+.fxk { display: none; }
+
+.fxk:checked + label { background: #f50; border: 1px solid #f50; }
+
+label { display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border: 1px solid #999; border-radius: 50%; font-size: 18px; color: #fff; margin: 0 10px 0 15px; }
+label.hui { color: #f8f8f8; }
+
+.xs { width: 100%; height: 100%; overflow: hidden; background: #f1f1f1; }
+.xs header { width: 100%; height: 50px; line-height: 50px; text-align: center; position: fixed; top: 0; color: #3D4245; background: #f8f8f8; z-index: 111; }
+.xs header h1 { font-weight: normal; }
+.xs header .bj { position: absolute; top: 0; right: 20px; font-size: 16px; }
+.xs .center { color: #666; width: 100%; height: 100%; overflow: auto; padding: 50px 0 100px; }
+.xs .center li { border-bottom: 1px solid #ccc; width: 100%; margin-bottom: 1.5rem; }
+.xs .center li .head { height: 40px; line-height: 40px; align-items: center; font-size: 16px; position: relative; background: #fff; }
+.xs .center li .head img { width: 25px; height: 20px; margin-right: 10px; }
+.xs .center li .head .cz { font-size: 14px; position: absolute; top: 0; right: 15px; }
+.xs .center li .content { padding: 10px 0; width: 100%; align-items: center; background: #f8f8f8; }
+.xs .center li .content .shop { width: 7.2rem; margin-right: 10px; }
+.xs .center li .content .shop img { width: 100%; }
+.xs .center li .content .shop figcaption { margin-top: 10px; background: #F81131; color: #fff; text-align: center; }
+.xs .center li .content .xq { width: 18rem; }
+.xs .center li .content .xq h2 { font-weight: normal; font-size: 14px; }
+.xs .center li .content .xq p { color: #999; margin-top: 10px; }
+.xs .center li .content .xq .price { display: -webkit-flex; }
+.xs .center li .content .xq .price h4 { font-weight: normal; color: #f50; margin-top: 10px; margin-right: 10px; }
+.xs .center li .content .xq .price h4.yj { text-decoration: line-through; }
+.xs footer { width: 100%; border-top: 1px solid #ccc; position: fixed; bottom: 0; }
+.xs footer .foot { height: 50px; background: #fff; align-items: center; position: relative; font-size: 14px; color: #666; }
+.xs footer .foot a { display: inline-block; position: absolute; right: 0; height: 100%; color: #666; }
+.xs footer .foot a span { display: inline-block; }
+.xs footer .foot a span.js { background: #f50; width: 7rem; height: 50px; line-height: 50px; text-align: center; color: #fff; }
+.xs footer .foot a span.money { color: #f50; }
+.xs footer .foot a span.yunf { margin: 0 5px; }
+.xs footer .last { height: 50px; background: #f9f9f0; }
+.xs footer .last li { flex: 1; display: -webkit-flex; flex-direction: column; font-size: 14px; justify-content: center; align-items: center; color: #666; }
+.xs footer .last li i { font-size: 20px; text-shadow: 0 0 2px #000; color: #fff; margin-bottom: 5px; }
+
+/*# sourceMappingURL=xs.css.map */

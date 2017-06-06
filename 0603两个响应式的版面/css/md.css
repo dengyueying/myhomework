@@ -26,9 +26,9 @@ section .tout .tp p { font-size: 0.58333rem; color: #999; position: relative; }
 section .tout .tp p::before { content: ""; width: 0.25rem; height: 0.25rem; background: #999; display: block; position: absolute; top: 0.29167rem; left: -0.625rem; }
 section .box { flex-direction: column; border-top: 10px solid #eee; }
 section .box .nav { width: 100%; height: 2.08333rem; line-height: 2.08333rem; color: #111; font-size: 0.58333rem; position: relative; font-family: arial; padding: 0 0.41667rem; }
-section .box .nav .tm span { font-size: 1rem; font-weight: bold; font-family: "iconfont" !important; }
+section .box .nav .tm span.tm { font-size: 1rem; font-weight: bold; font-family: "iconfont" !important; }
+section .box .nav .tm span:not(:first-child) { display: inline-block; width: 1.08333rem; line-height: 0.83333rem; border: 1px solid #999999; border-radius: 0.08333rem; padding: 0.125rem; margin: 0 0.125rem; text-align: center; }
 section .box .nav .tm em { font-style: normal; }
-section .box .nav .tm time { width: 0.75rem; height: 0.75rem; border: 1px solid #999999; border-radius: 0.08333rem; padding: 0.125rem; margin: 0 0.125rem; }
 section .box .nav a { position: absolute; top: 0.20833rem; right: 0.625rem; }
 section .box .nav a span { background: #FFC001; border-radius: 0.20833rem; padding: 0.08333rem 0.33333rem; color: #783E18; margin-right: 0.625rem; }
 section .box ul li { flex: 1; height: 8.33333rem; margin-left: 0.41667rem; }

@@ -8,9 +8,74 @@
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="css/xs.css" media="screen and (max-width:668px)"/>
 		<link rel="stylesheet" href="css/md.css" media="screen and (min-width:668px)"/>
+		<script type="text/javascript" src="js/index.js" ></script>
 		<script>
 			window.onload=function(){
-				document.getElementsByTagName("html")[0].style.fontSize=innerWidth/32+"px"
+				document.getElementsByTagName("html")[0].style.fontSize=innerWidth/32+"px";
+				
+				var hou=document.getElementById("hou");
+				var min=document.getElementById("min");
+				var sec=document.getElementById("sec");
+				var em1=document.getElementById("em1");
+				var em2=document.getElementById("em2");
+				var em3=document.getElementById("em3");
+				
+				var timer=null;
+				
+				var d=new Date();
+				var h=d.getHours();
+				var m=d.getMinutes();
+				var s=d.getSeconds();
+				
+				timer=setInterval(function(){
+					sec.innerHTML-=1;
+					if(sec.innerHTML<0){
+						min.innerHTML-=1;
+						sec.innerHTML=59;
+						if(min.innerHTML<0){
+							hou.innerHTML-=1;
+							min.innerHTML=59;
+							if(hou.innerHTML==-1){
+								clearInterval(timer)
+								hou.innerHTML="下";
+								min.innerHTML="一";
+								sec.innerHTML="波";
+							}
+						}
+					}
+				},1000)
+				
+				if(h>em1.innerHTML){
+					clearInterval(timer);
+					hou.innerHTML="下";
+					min.innerHTML="一";
+					sec.innerHTML="波";
+				}
+				else{
+					hou.innerHTML=parseInt(em1.innerHTML)-h-1;
+					min.innerHTML=60-m-1;
+					sec.innerHTML=60-s-1;
+					
+						timer=setInterval(function(){
+							sec.innerHTML-=1;
+							if(sec.innerHTML<0){
+								min.innerHTML-=1;
+								sec.innerHTML=59;
+								if(min.innerHTML<0){
+									hou.innerHTML-=1;
+									min.innerHTML=59;
+									if(hou.innerHTML==-1){
+										clearInterval(timer)
+										hou.innerHTML="下";
+										min.innerHTML="一";
+										sec.innerHTML="波";
+									}
+								}
+							}
+						},1000)
+					
+					
+				}
 			}
 		</script>
 	</head>
@@ -77,9 +142,16 @@
 				<div class="box">
 					<div class="nav">
 						<div class="tm">
-							<span class="hong">天猫</span>
-							<em class="hong">18:00场</em>
-							<time>01</time>:<time>01</time>:<time class="hong">46</time>
+							<span class="tm hong">天猫</span>
+							<em class="hong" id="em1">24</em>
+							<em class="hong">:</em>
+							<em class="hong" id="em2">00</em>
+							<em class="hong">:</em>
+							<em class="hong" id="em3">00</em>
+							<em class="hong">场</em>
+							<span id="hou">02</span>:
+							<span id="min">59</span>:
+							<span class="hong" id="sec">59</span>
 						</div>
 						<a href="#">
 							<span>好货超值强</span>>

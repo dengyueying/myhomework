@@ -137,21 +137,26 @@ section{
             padding: 0 10/$sc+rem;
             .tm{
                 span{
-                    font-size:24/$sc+rem;
-                    font-weight: bold;
-                    font-family: "iconfont" !important;
+                    &.tm{
+                         font-size:24/$sc+rem;
+                        font-weight: bold;
+                        font-family: "iconfont" !important;    
+                    }
+                    &:not(:first-child){
+                        display: inline-block;
+                        width:26/$sc+rem;
+                        line-height: 20/$sc+rem;
+                        border:1px solid #999999;
+                        border-radius:2/$sc+rem;
+                        padding:3/$sc+rem;
+                        margin: 0 3/$sc+rem; 
+                        text-align: center;
+                    }
+                    
                 }
                 em{
                     font-style: normal;
                 }
-                time{
-                    width:18/$sc+rem;
-                    height:18/$sc+rem;
-                    border:1px solid #999999;
-                    border-radius:2/$sc+rem;
-                    padding:3/$sc+rem;;
-                    margin: 0 3/$sc+rem;
-                }    
             }
             a{
                 position: absolute;

@@ -27,6 +27,23 @@
 				var m=d.getMinutes();
 				var s=d.getSeconds();
 				
+				timer=setInterval(function(){
+					sec.innerHTML-=1;
+					if(sec.innerHTML<0){
+						min.innerHTML-=1;
+						sec.innerHTML=59;
+						if(min.innerHTML<0){
+							hou.innerHTML-=1;
+							min.innerHTML=59;
+							if(hou.innerHTML==-1){
+								clearInterval(timer)
+								hou.innerHTML="下";
+								min.innerHTML="一";
+								sec.innerHTML="波";
+							}
+						}
+					}
+				},1000)
 				
 				if(h>em1.innerHTML){
 					clearInterval(timer);
